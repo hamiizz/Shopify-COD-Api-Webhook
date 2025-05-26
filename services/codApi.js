@@ -33,7 +33,7 @@ async function sendOrderToCOD(order) {
     amount = '0.00';
     description += `\nThe order is paid via online payment. Order amount: ${order.total_price}`;
   }
-
+ 
   const payload = {
     name: order.shipping_address?.name || order.customer?.first_name || 'Unknown',
     customer_name: order.shipping_address?.name || order.customer?.first_name || 'Unknown',
